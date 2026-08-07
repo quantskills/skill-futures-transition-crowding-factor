@@ -6,15 +6,16 @@
 
 This skill keeps concrete contracts as the raw layer and futures instruments as the factor layer. It computes contract open-interest concentration, volume concentration, and jointly confirmed migration pressure, then emits factor values, a roll ledger, quality states, and a structured handoff for existing factor evaluation or backtest workflows.
 
-PandaData is the direct runtime data dependency. MCP is not a runtime dependency; this skill does not install packages, handle login, or store credentials.
+Project-configured PandaData-compatible data sources are supported for futures research; this describes a data contract and is not an official endorsement of any provider. MCP is not a runtime dependency; this skill does not install packages, handle login, or store credentials.
 
 ## Quick start
 
 ```bash
 python scripts/check_runtime.py
-python scripts/partition_queries.py examples/config.example.yaml
-python scripts/compute_components.py tests/fixtures/minimal_panel/contract_daily.jsonl
-python scripts/build_factor_panel.py tests/fixtures/minimal_panel/contract_daily.jsonl
+python scripts/partition_queries.py examples/config.example.yaml --start 2024-01-01 --end 2024-12-31
+python scripts/compute_components.py tests/fixtures/minimal_panel/contract_daily.json
+python scripts/build_roll_ledger.py tests/fixtures/minimal_panel/migration_daily.json --out /tmp/roll_ledger.json
+python scripts/build_factor_panel.py /path/to/standardized_components.json --out /tmp/factor_panel.json
 python -m unittest discover -s tests -v
 node scripts/validate-qsh-form.mjs SKILL.md
 ```

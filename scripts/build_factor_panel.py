@@ -9,12 +9,12 @@ def build(rows):
     required=('oi_hhi_active_cs_z','volume_hhi_active_cs_z','migration_pressure_magnitude_cs_z')
     for row in rows:
         values=[row.get(key) for key in required]
-        available=all(isinstance(v,(int,float)) for v in values)
+        available=all(isinstance(v,(int,float)) and not isinstance(v,bool) for v in values)
         item=dict(row)
         item['crowding_score_core']=sum(values)/3 if available else None
         item['crowding_reversal_core']=-item['crowding_score_core'] if available else None
-        item['factor_status']='available' if available else 'not_available'
-        item['core_component_count']=sum(isinstance(v,(int,float)) for v in values)
+        item['factor_status']='available' if available else ('missing_migration_pressure' if row.get('migration_pressure_magnitude_cs_z') is None else 'not_available')
+        item['core_component_count']=sum(isinstance(v,(int,float)) and not isinstance(v,bool) for v in values)
         out.append(item)
     return out
 

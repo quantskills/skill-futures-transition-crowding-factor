@@ -1,0 +1,15 @@
+---
+description: Load the futures transition crowding factor skill for auditable contract migration and concentration features.
+alwaysApply: false
+---
+
+# Futures Transition Crowding Factor
+
+When this repository is used from Cursor:
+
+1. Load `.cursor/skills/futures-transition-crowding-factor/SKILL.md` as the authoritative skill contract.
+2. Read the relevant references under `references/`, especially `panda-data-contract.md`, `contract-lifecycle.md`, `migration-and-roll-ledger.md`, `crowding-components.md`, and `validation-protocol.md`.
+3. Use the deterministic scripts under `scripts/` for runtime checks, query partitioning, ledger construction, component computation, panel construction, labels, and freeze validation.
+4. Treat direct `panda_data` access, primary tests, external evaluation/backtest handoff, and every write as actions requiring the user's explicit authorization where applicable.
+5. Never handle credentials, tokens, private data, or unredacted sensitive data. Keep synthetic fixtures separate from live data evidence.
+6. Do not dynamically reweight the fixed core components, silently fill unavailable data with zero, or issue trading instructions.

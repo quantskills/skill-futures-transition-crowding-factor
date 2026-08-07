@@ -8,15 +8,16 @@
 
 本 Skill 以具体期货合约为原始层，以期货品种为因子层，计算合约持仓集中度、成交集中度和经过联合规则确认的主力迁移压力，输出因子值、迁移台账、质量状态和可交给现有因子评价/回测流程的标准化面板。
 
-PandaData 是运行时直接数据依赖。MCP 不是运行依赖，也不处理登录、凭证或自动安装。
+项目配置的 PandaData-compatible 数据源可用于期货研究；这是数据契约描述，不构成对任何提供方的官方背书。MCP 不是运行依赖，也不处理登录、凭证或自动安装。
 
 ## 快速开始
 
 ```bash
 python scripts/check_runtime.py
-python scripts/partition_queries.py examples/config.example.yaml
-python scripts/compute_components.py tests/fixtures/minimal_panel/contract_daily.jsonl
-python scripts/build_factor_panel.py tests/fixtures/minimal_panel/contract_daily.jsonl
+python scripts/partition_queries.py examples/config.example.yaml --start 2024-01-01 --end 2024-12-31
+python scripts/compute_components.py tests/fixtures/minimal_panel/contract_daily.json
+python scripts/build_roll_ledger.py tests/fixtures/minimal_panel/migration_daily.json --out /tmp/roll_ledger.json
+python scripts/build_factor_panel.py /path/to/standardized_components.json --out /tmp/factor_panel.json
 python -m unittest discover -s tests -v
 node scripts/validate-qsh-form.mjs SKILL.md
 ```

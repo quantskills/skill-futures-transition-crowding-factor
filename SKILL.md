@@ -10,7 +10,7 @@ quantSkills:
   license: GPL-3.0
   category: factor
   tags: [futures-factor, crowding, contract-transition, open-interest, roll-ledger]
-  platforms: [claude-code, codex, openclaw, cursor]
+  platforms: [claude-code, codex, openclaw, cursor, hermes]
   language: zh-en
   status: draft
   validation_level: listed
