@@ -1,0 +1,5 @@
+interface:
+  display_name: "Futures Transition Crowding Factor"
+  short_description: "Build auditable futures transition factors"
+  default_prompt: "Use $futures-transition-crowding-factor to compute point-in-time contract concentration and confirmed migration features from direct PandaData futures data, then emit a factor panel and roll-ledger evidence without issuing trading instructions."
+entrypoint: SKILL.md

@@ -1,0 +1,13 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["data_source","confirmation_days","candidate_pool","standardization","primary_test"],
+  "properties":{
+    "data_source":{"const":"panda_data"},
+    "confirmation_days":{"type":"integer","minimum":1},
+    "candidate_pool":{"type":"object","required":["k","volume_weight","open_interest_weight"]},
+    "standardization":{"type":"object","required":["rolling_window","min_history_ratio","mad_tolerance"]},
+    "primary_test":{"type":"object","required":["factor","label","horizon"]}
+  },
+  "additionalProperties":true
+}

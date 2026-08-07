@@ -1,0 +1,13 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["confirmation_days","status"],
+  "properties":{
+    "confirmation_days":{"type":"integer","minimum":1},
+    "status":{"type":"string"},
+    "execution_date":{"type":["string","null"]},
+    "current_contract":{"type":["string","null"]},
+    "new_contract":{"type":["string","null"]}
+  },
+  "additionalProperties":true
+}

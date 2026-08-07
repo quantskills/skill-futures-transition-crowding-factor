@@ -1,0 +1,10 @@
+[
+  {"date":"2024-01-02","symbol":"RB2405.SHF","underlying_symbol":"RB","eligible":true,"volume":100,"open_interest":100,"dominant_id":"RB2405.SHF"},
+  {"date":"2024-01-02","symbol":"RB2409.SHF","underlying_symbol":"RB","eligible":true,"volume":50,"open_interest":60,"dominant_id":"RB2405.SHF"},
+  {"date":"2024-01-02","symbol":"RB2410.SHF","underlying_symbol":"RB","eligible":true,"volume":25,"open_interest":30,"dominant_id":"RB2405.SHF"},
+  {"date":"2024-01-02","symbol":"RB2411.SHF","underlying_symbol":"RB","eligible":true,"volume":10,"open_interest":20,"dominant_id":"RB2405.SHF"},
+  {"date":"2024-01-03","symbol":"RB2405.SHF","underlying_symbol":"RB","eligible":true,"volume":30,"open_interest":40,"dominant_id":"RB2409.SHF"},
+  {"date":"2024-01-03","symbol":"RB2409.SHF","underlying_symbol":"RB","eligible":true,"volume":100,"open_interest":120,"dominant_id":"RB2409.SHF"},
+  {"date":"2024-01-03","symbol":"RB2410.SHF","underlying_symbol":"RB","eligible":true,"volume":35,"open_interest":45,"dominant_id":"RB2409.SHF"},
+  {"date":"2024-01-03","symbol":"RB2411.SHF","underlying_symbol":"RB","eligible":true,"volume":10,"open_interest":20,"dominant_id":"RB2409.SHF"}
+]

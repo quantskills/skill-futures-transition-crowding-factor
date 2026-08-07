@@ -1,0 +1,13 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["date","underlying_symbol","crowding_reversal_core"],
+  "properties":{
+    "date":{"type":"string"},
+    "underlying_symbol":{"type":"string"},
+    "crowding_score_core":{"type":["number","null"]},
+    "crowding_reversal_core":{"type":["number","null"]},
+    "factor_status":{"type":"string"}
+  },
+  "additionalProperties":true
+}

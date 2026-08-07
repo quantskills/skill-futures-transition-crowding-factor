@@ -1,0 +1,8 @@
+{
+  "config_version": "1.0.0",
+  "data_source": "panda_data",
+  "confirmation_days": 2,
+  "candidate_pool": {"k": 3, "volume_weight": 0.5, "open_interest_weight": 0.5},
+  "standardization": {"rolling_window": 252, "min_history_ratio": 0.8, "mad_tolerance": 1e-12},
+  "primary_test": {"factor": "crowding_reversal_core", "label": "rule_based_roll_return_open_to_open_5d", "horizon": 5}
+}
