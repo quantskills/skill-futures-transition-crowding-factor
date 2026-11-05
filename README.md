@@ -46,3 +46,6 @@ node scripts/validate-qsh-form.mjs SKILL.md
 ## 许可证
 
 GPL-3.0，见 [LICENSE](LICENSE)。
+
+
+Pandadata 兼容维护：[abgyjaguo](https://github.com/abgyjaguo)，保留原项目作者署名。
