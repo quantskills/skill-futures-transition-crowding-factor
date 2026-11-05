@@ -44,3 +44,6 @@ The core factor is a falsifiable research hypothesis; crowding reversal is not a
 ## License
 
 GPL-3.0. See [LICENSE](LICENSE).
+
+
+Pandadata compatibility maintenance: [abgyjaguo](https://github.com/abgyjaguo). Existing authorship is retained.

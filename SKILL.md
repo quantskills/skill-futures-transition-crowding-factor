@@ -7,7 +7,7 @@ quantSkills:
   repository_url: https://github.com/quantskills/skill-futures-transition-crowding-factor
   project_type: skill
   collection: futures-factor-research
-  license: GPL-3.0
+  license: GPL-3.0-only
   category: factor
   tags: [futures-factor, crowding, contract-transition, open-interest, roll-ledger]
   platforms: [claude-code, codex, openclaw, cursor, hermes]
@@ -124,3 +124,7 @@ Primary acceptance requires positive Rank IC, HAC p-value below 0.05, positive I
 ## Safety and Evidence
 
 Direct PandaData data, query parameters, fields, returned schema, availability policy, partitions, storage mode, and fingerprints are evidence. Missing optional data disables only dependent variants. Missing core fields block the core factor. No credentials or private data enter reports. This is research and education only, not investment advice.
+
+## Pandadata compatibility
+
+[Pandadata 1.0.6 compatibility](references/pandadata-compatibility.md) — exact SDK baseline, validation scope, and shared guidance for all supported agent runtimes.
